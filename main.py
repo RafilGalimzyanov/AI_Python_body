@@ -8,7 +8,7 @@ body = cv2.CascadeClassifier('body.xml')
 results = body.detectMultiScale(img_gray, scaleFactor=2, minNeighbors=3)
 
 for (x, y, w, h) in results:
-    cv2.rectangle(img, (x, y), (x+w, y+h), (0, 0, 255), thickness=2)
+    cv2.rectangle(img, (x, y), (x+w, y+h), (0, 0, 255), thickness=1)
 
 if results.all() != 0:
     print(f'Высота в пикселях:', results[0][2])
